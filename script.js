@@ -11,7 +11,7 @@ function createGrid(number) {
         child = gridSpace.firstElementChild; 
     }
 
-    let gridSize = 600/number;
+    let gridSize = 500/number;
 
     for (i=0; i<number**2; i++) {
         let grid = document.createElement("div");
@@ -28,7 +28,7 @@ createGrid(16);
 
 let setColor = "black"
 
-// ---------------------------------------------------------------------
+// ------------------------------
 // Event listeners to paint each element of the grid when clicked, or moved over while clicked
 
 let clicked = false;
@@ -62,4 +62,10 @@ gridSpace.addEventListener("click", function(e) {
     }
 });
 
-// -------------------------------------------------------------------------
+// -------------------------------
+
+
+// Eraser button defines setColor as white 
+const eraser = document.querySelector(".eraser");
+eraser.addEventListener("click", () => setColor = "white");
+

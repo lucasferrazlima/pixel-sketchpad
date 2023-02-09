@@ -1,11 +1,59 @@
 body {
     display: flex;
+    flex-direction: column;
+    background-color: #779ecb;
+    min-height: 100vh
+}
+
+h1 {
+    font-family: Abel;
+    align-self: center;
+    font-size: 70px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #F8C8DC;
+}
+
+.content {
+    display: flex;
+    align-self: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.footer {
+    font-family: Abel;
+    margin-top: 40px;
+    color: cdd7e2;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    justify-self: flex-end;
+}
+
+a {
+    color: #F8C8DC;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .gridspace {
     display: flex;
-    width: 600px;
-    height: 600px;
-    background-color: bisque;
+    align-self: center;
+    width: 500px;
+    height: 500px;
+    background-color: white;
     flex-wrap: wrap;
+}
+
+.grid {
+    border: #b8b9ba;
+    border-width: thin;
+    border-style: solid;
+    box-sizing: border-box; /* that way the grid border won't affect its size */
 }
