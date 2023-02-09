@@ -69,6 +69,9 @@ gridSpace.addEventListener("click", function(e) {
 const eraser = document.querySelector(".eraser");
 eraser.addEventListener("click", () => setColor = "white");
 
+// Pencil buton defines setColor as black
+const pencil = document.querySelector(".pencil");
+pencil.addEventListener("click", () => setColor = "black");
 
 // slider for selecting grid size
 const slideValue = document.querySelector("span");
@@ -101,19 +104,3 @@ gridButton.addEventListener("click", function() {
     }
 })
 
-Coloris({
-    theme: "polaroid",
-    swatches: [
-        '#264653',
-        '#2a9d8f',
-        '#e9c46a',
-        'rgb(244,162,97)',
-        '#e76f51',
-        '#d62828',
-        'navy',
-        '#07b',
-        '#0096c7',
-        '#00b4d880',
-        'rgba(0,119,182,0.8)'
-      ]
-});
