@@ -69,6 +69,18 @@ gridSpace.addEventListener("click", function(e) {
 const eraser = document.querySelector(".eraser");
 eraser.addEventListener("click", () => setColor = "white");
 
+
+// slider for selecting grid size
+const slideValue = document.querySelector("span");
+const inputSlider = document.querySelector(".slider-input");
+inputSlider.oninput = (()=>{
+  let value = inputSlider.value;
+  slideValue.textContent = `Grid Size: ${value}x${value}`;
+  createGrid(value);
+  grid = document.querySelectorAll(".grid");
+});
+
+
 // Button for setting grid visibility on/off
 let grid = document.querySelectorAll(".grid") 
 let gridVisible = true;
