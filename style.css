@@ -2,7 +2,8 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #3D3D3D;
-    min-height: 100vh
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 h1 {
@@ -17,18 +18,52 @@ h1 {
 
 .content {
     display: flex;
-    align-self: center;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .menu {
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
+    justify-content: center;
+    margin-right: 20px;
+    gap: 20px;
+}
+
+button {
+    width: 220px;
+    background-color: #575757;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    border: solid #F8C8DC 1px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+img{
+    height: 30px;
+    padding: 10px;
+}
+
+button:hover, .range:hover {
+    border: solid #f56aa2 1px;
+}
+
+button:hover > img {
+    height: 40px;
+    padding: 5px;
+    
+    
+}
+
+.placeholder {
+    width: 230px;
 }
 
 .footer {
     font-family: Abel;
-    margin-top: 40px;
+    margin-top: 60px;
     color: white;
     padding-bottom: 15px;
     display: flex;
@@ -44,7 +79,6 @@ a {
 
 .gridspace {
     display: flex;
-    align-self: center;
     width: 500px;
     height: 500px;
     background-color: white;
@@ -64,6 +98,7 @@ a {
   background: #575757;
   padding: 0px 20px;
   border-radius: 10px;
+  border: solid #F8C8DC 1px;
   box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
 }
 
@@ -81,15 +116,28 @@ a {
   font-weight: 600;
 }
 
+.sliderValue {
+    position: relative;
+    top: 15px;
+}
+
+span {
+    color: #F8C8DC;
+    font-family: Abel;
+    margin-left: 30px;
+    font-size: 20px;
+}
+
 .range input{
+  position: relative;
+  bottom: 5px;
   -webkit-appearance: none;
   width: 100%;
-  height: 3px;
+  height: 4px;
   background: #ddd;
   border-radius: 5px;
   outline: none;
   border: none;
-  z-index: 2222;
 }
 .range input::-webkit-slider-thumb{
   -webkit-appearance: none;
@@ -100,3 +148,5 @@ a {
   border: 3px solid #F8C8DC;
   cursor: pointer;
 }
+
+
