@@ -69,3 +69,22 @@ gridSpace.addEventListener("click", function(e) {
 const eraser = document.querySelector(".eraser");
 eraser.addEventListener("click", () => setColor = "white");
 
+// Button for setting grid visibility on/off
+let grid = document.querySelectorAll(".grid") 
+let gridVisible = true;
+const gridButton = document.querySelector(".grid-button");
+gridButton.addEventListener("click", function() {
+    if (gridVisible == true) {
+        for (let i = 0; i < grid.length; i++){
+            let currentGrid = grid[i];
+            currentGrid.style.borderColor = "white"; 
+        }
+        gridVisible = false;
+    } else if (gridVisible == false) {
+        for (let i = 0; i < grid.length; i++){
+            let currentGrid = grid[i];
+            currentGrid.style.borderColor = "#b8b9ba"; 
+        }
+        gridVisible = true;
+    }
+})
